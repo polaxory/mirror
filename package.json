@@ -18,6 +18,7 @@
     "cards": "node scripts/preview-card.mjs",
     "scores": "node scripts/preview-score.mjs",
     "preflight": "node scripts/preflight.mjs",
+    "smoke": "node scripts/smoke.mjs",
     "sweep": "node tests/sweep.mjs",
     "sim": "node tests/cohort-sim.mjs",
     "gen-demo": "node scripts/gen-demo.mjs"

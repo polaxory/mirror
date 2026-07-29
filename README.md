@@ -220,6 +220,17 @@ as designed.
 3. Add env var `HELIUS_API_KEY`
 4. Deploy
 
+**Then verify the deployment:**
+
+```bash
+node scripts/smoke.mjs https://your-deployment.vercel.app
+```
+
+Checks every surface against the live URL — page, analyze API, card as a real PNG
+(magic-number verified, not just a content-type header), the `/w/` rewrite crawlers
+depend on, the Score endpoint, and that bad input fails cleanly. Exits non-zero on any
+blocker and prints the fix.
+
 **Optional — enable the measured cohort.** Create a free Vercel KV or Upstash
 Redis database and set `KV_REST_API_URL` + `KV_REST_API_TOKEN` (Vercel KV injects
 these names automatically; Upstash uses the same REST shape). Also set
