@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "api/score.js": { "maxDuration": 30 },
+    "api/analyze.js": { "maxDuration": 15 }
+  },
+  "rewrites": [
+    { "source": "/w/:address", "destination": "/api/share?address=:address" }
+  ]
+}

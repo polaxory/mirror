@@ -1,0 +1,34 @@
+{
+  "name": "polaxory-mirror",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "node tests/validate.mjs && node tests/cohort.mjs && node tests/card.mjs && node tests/valuation.mjs && node tests/rotations.mjs && node tests/holders.mjs && node tests/prices.mjs",
+    "test:engine": "node tests/validate.mjs",
+    "test:cohort": "node tests/cohort.mjs",
+    "test:card": "node tests/card.mjs",
+    "test:valuation": "node tests/valuation.mjs",
+    "test:rotations": "node tests/rotations.mjs",
+    "test:holders": "node tests/holders.mjs",
+    "test:prices": "node tests/prices.mjs",
+    "cards": "node scripts/preview-card.mjs",
+    "scores": "node scripts/preview-score.mjs",
+    "preflight": "node scripts/preflight.mjs",
+    "sweep": "node tests/sweep.mjs",
+    "sim": "node tests/cohort-sim.mjs",
+    "gen-demo": "node scripts/gen-demo.mjs"
+  },
+  "dependencies": {
+    "@vercel/og": "^0.11.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^5.4.11"
+  }
+}
